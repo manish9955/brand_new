@@ -1,0 +1,142 @@
+
+
+.main-shorts{
+    display:grid;
+    grid-template-columns:  1fr;
+    width: 100%;  
+  
+    
+}
+
+.actual-shorts{
+    display:grid;
+    grid-template-columns: 334px 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+   
+    
+  
+
+}
+.shorts{
+    margin-top: 65px;
+    margin-left: 47.3%;
+    position: fixed;
+
+  
+}
+
+.iconn-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 18px;
+   
+    
+}
+.iconn-div{
+   
+    height: 85vh;
+    border-radius: 10px;
+    background-color:white;
+    
+   
+}
+.ABC p{
+    margin: 0px;
+    padding-left: 10px;
+}
+.mybutton .absk{
+   width: 36px;
+   height: 36px;
+   border-radius: 5px;
+
+}
+.mybutton{
+    all: unset;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: rgb(228, 224, 224);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mybutton img{
+    width: 20px;
+    height: 20px;
+}
+.mybutton:hover{
+    background-color: rgb(155, 151, 151);
+}
+
+.video-div{
+    background-color: gray;
+    height: 85vh;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+.video-div video{ 
+    height:auto ;
+    width:336px;
+    border-radius: 10px;
+    
+}
+.up-down{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-items: center;
+    position:absolute;
+    top: 45%;
+    left: 95%;
+    
+   
+
+
+}
+.up-down{
+    position:fixed;
+}
+.up{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: rgb(235, 228, 228);
+}
+.up button{
+    all:unset;
+}
+.up:hover{
+background-color: rgb(196, 195, 195);
+}
+.up-down img{
+    display:flex;
+   
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+}
+.absk-button{
+    all: unset;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+
+}
+.absk-button img{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

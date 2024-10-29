@@ -2,7 +2,12 @@ import React, { useContext } from "react";
 import "./Video.css";
 import { VideoContext } from "./Context";
 import { useRef, useState } from "react";
-import { useNavigate, useParams, useSearchParams } from "react-router-dom";
+import {
+  Link,
+  useNavigate,
+  useParams,
+  useSearchParams,
+} from "react-router-dom";
 import Sdata from "./Data";
 import Asidebar from "./Asidebar";
 
@@ -10,12 +15,12 @@ const Video = () => {
   const { videoId } = useParams();
   const videoIdNum = videoId ? Number(videoId) : null;
   const video = Sdata.find((record) => record.id === videoIdNum);
-  console.log(video.title);
 
   const navigate = useNavigate();
 
   const handlePlayer1 = (videoId) => () => {
     navigate(`/${videoId}`);
+    window.location.reload();
     window.scrollTo(0, 0);
   };
 
@@ -184,20 +189,22 @@ const Video = () => {
                 <img src="./youtube_icons/pexels1.jpg" />
               </div>
               <div className="icon-comment">
-                <div class="comment-up">
-                  <form class="comment-form" onSubmit={handleSubmit}>
+                <div className="comment-up">
+                  <form className="comment-form" onSubmit={handleSubmit}>
                     <textarea
                       value={comment}
                       onChange={handleInputChange}
                       placeholder="Add a comment..."
                     ></textarea>
                     <hr></hr>
-                    <div className="buttons-comment">
-                      <button type="cancel">Cancel</button>
-                      <button type="submit" className="submit1">
-                        Comment
-                      </button>
-                    </div>
+                    {comment && (
+                      <div className="buttons-comment">
+                        <button type="cancel">Cancel</button>
+                        <button type="submit" className="submit1">
+                          Comment
+                        </button>
+                      </div>
+                    )}
                   </form>
                 </div>
               </div>

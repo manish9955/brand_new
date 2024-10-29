@@ -4,14 +4,14 @@ import "./Shorts.css";
 import Asidebar from "./Asidebar";
 import Bsidebar from "./Bsidebar";
 import ShortsData from "./ShortsData";
+
 const Shorts = () => {
   const [search] = useSearchParams();
   const side = search.get("side") || "max";
   const [position, setPosition] = useState(0); // Starting position
   const divRef = useRef(null);
-  const vidlen = ShortsData.length;
-  console.log(vidlen);
 
+  // Define moveUp and moveDown functions within the component scope
   const moveUp = () => {
     setPosition((prev) => prev - (divRef.current?.offsetHeight || 0)); // Move up by the div's height
   };
@@ -83,6 +83,7 @@ const Shorts = () => {
             </div>
           </div>
         ))}
+
         <div className="up-down">
           <div className="up">
             <button onClick={moveUp}>

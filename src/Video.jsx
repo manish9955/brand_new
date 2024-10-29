@@ -16,6 +16,7 @@ const Video = () => {
 
   const handlePlayer1 = (videoId) => () => {
     navigate(`/${videoId}`);
+    window.location.reload();
     window.scrollTo(0, 0);
   };
 

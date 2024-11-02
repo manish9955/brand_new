@@ -2,12 +2,7 @@ import React, { useContext } from "react";
 import "./Video.css";
 import { VideoContext } from "./Context";
 import { useRef, useState } from "react";
-import {
-  Link,
-  useNavigate,
-  useParams,
-  useSearchParams,
-} from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import Sdata from "./Data";
 import Asidebar from "./Asidebar";
 

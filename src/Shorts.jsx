@@ -6,6 +6,27 @@ import Bsidebar from "./Bsidebar";
 import ShortsData from "./ShortsData";
 
 const Shorts = () => {
+  const [message, setMessage] = useState("Use arrow keys!");
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      switch (event.key) {
+        case "ArrowUp":
+          moveUp();
+          break;
+        case "ArrowDown":
+          moveDown();
+          break;
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    // Cleanup function to remove event listener
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
   const [search] = useSearchParams();
   const side = search.get("side") || "max";
   const [position, setPosition] = useState(0); // Starting position
@@ -83,15 +104,14 @@ const Shorts = () => {
             </div>
           </div>
         ))}
-
         <div className="up-down">
           <div className="up">
-            <button onClick={moveUp}>
+            <button onClick={moveDown}>
               <img src="./youtube_icons/top.png"></img>
             </button>
           </div>
           <div className="up">
-            <button onClick={moveDown}>
+            <button onClick={moveUp}>
               <img src="./youtube_icons/arrowdown12.png"></img>
             </button>
           </div>

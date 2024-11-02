@@ -198,3 +198,30 @@
     outline: none;     /* Remove focus outline on click */
     cursor: pointer
 }
+
+/* Target devices with a max-width of 480px (most mobile phones) */
+@media (max-width: 768px) {
+  /* Styles for small mobile devices */
+  .main-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    position:relative;
+    
+    
+}
+
+.down1{
+  display: inline; 
+  max-width: 90%;
+  
+}
+.below-wrap{
+  display: grid;
+  grid-template-columns:1fr 4fr ;
+}
+
+.down-partition{
+  margin-left: -15px;
+  
+}
+}

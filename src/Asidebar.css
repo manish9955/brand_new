@@ -8,7 +8,7 @@
   top: 0;
   left: 0;
   width: 220px; /* Adjust width */
-  height: 100vh; /* Full height */
+  height: 90vh; /* Full height */
   background-color:white; /* Optional background */
   z-index: 1000; /* To make sure it's above other elements */
   overflow-y: hidden;

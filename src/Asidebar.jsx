@@ -141,7 +141,7 @@ const Asidebar = () => {
           </div>
           <div className="home">
             <button>
-              <img src="./youtube_icons/trophy.png" />
+              <img src="./youtube_icons/Trophy.png" />
               Sports
             </button>
           </div>

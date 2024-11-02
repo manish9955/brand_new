@@ -36,6 +36,7 @@
 }
 .main-content button{
     all: unset;
+    cursor: pointer;
 }
 
 .main-content:hover{

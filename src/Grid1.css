@@ -225,3 +225,15 @@
   
 }
 }
+@media (min-width: 600px) and (max-width: 899px) {
+  /* Styles for screens between 600px and 899px */
+  .main-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    column-gap: 10px;
+    row-gap: 20px;
+    
+    
+}
+
+}

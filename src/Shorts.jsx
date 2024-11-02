@@ -12,10 +12,10 @@ const Shorts = () => {
     const handleKeyDown = (event) => {
       switch (event.key) {
         case "ArrowUp":
-          moveUp();
+          moveDown();
           break;
         case "ArrowDown":
-          moveDown();
+          moveUp();
           break;
       }
     };

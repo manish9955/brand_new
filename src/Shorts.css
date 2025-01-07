@@ -102,6 +102,11 @@
 
 
 }
+.dis{
+    display: none;
+    background-color: royalblue;
+    transition: cubic-bezier(0.23, 1, 0.320, 1);
+}
 .up-down{
     position:fixed;
 }
@@ -115,14 +120,35 @@
     border-radius: 30px;
     background-color: rgb(235, 228, 228);
 }
+.down{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: rgb(235, 228, 228);
+   
+
+}
 .up button{
     all:unset;
     cursor: pointer;
 }
+.down button{
+    all:unset;
+    cursor: pointer;
+}
+
 .up:hover{
 background-color: rgb(196, 195, 195);
 cursor: pointer;
 }
+
+.down:hover{
+    background-color: rgb(196, 195, 195);
+    cursor: pointer;
+    }
 .up-down img{
     display:flex;
    
@@ -156,5 +182,12 @@ cursor: pointer;
 .up-down{
     display: none;
 }
+
+}
+@media (min-width: 600px) and (max-width: 899px) {
+    .up-down{
+        display: flex;
+        right: 100px;
+    }
 
 }

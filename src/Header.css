@@ -166,9 +166,7 @@
       grid-template-columns: 1fr 1fr 1fr;
       width: 100vw;
       height: 40px;
-      
-     
-      
+          
   }
     .left-side-bar{
       display:grid;

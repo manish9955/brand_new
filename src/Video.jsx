@@ -5,8 +5,9 @@ import { useRef, useState } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import Sdata from "./Data";
 import Asidebar from "./Asidebar";
+import SearchResult from "./SearchResult";
 
-const Video = () => {
+const Video = ({ filter_name }) => {
   const { videoId } = useParams();
   const videoIdNum = videoId ? Number(videoId) : null;
   const video = Sdata.find((record) => record.id === videoIdNum);

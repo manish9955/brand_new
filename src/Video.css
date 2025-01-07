@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: 1.9fr 1fr;
     column-gap: 30px;
-    min-height:1000px;
+   
   
 }
 .main-video{
@@ -14,7 +14,6 @@
     width: 850px;
     height: 480px;
     margin-top: 10px;
-   
     border-radius: 10px;
     margin-top: 80px;
 }
@@ -585,4 +584,17 @@ width: 400px;
 }
 
         
+  }
+  @media (min-width: 600px) and (max-width: 899px) {
+    .main-video{
+   
+        margin-left: 15px;  
+    }
+    .main-wrapper{
+        display:flex;
+        flex-direction: column;
+        column-gap: 30px;
+     
+      
+    }
   }

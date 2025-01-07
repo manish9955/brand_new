@@ -6,9 +6,10 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import Bsidebar from "./Bsidebar";
 import Asidebar from "./Asidebar";
 
-const Header = () => {
+const Header = ({ handleFilter, filter, filterClick }) => {
   const navigate = useNavigate();
   const [search, setSearch] = useSearchParams();
+
   const backtohome1 = () => {
     navigate("/");
   };
@@ -45,8 +46,14 @@ const Header = () => {
         </div>
 
         <div className="middle-bar">
-          <input className="search-bar" type="text" placeholder="Search" />
-          <button className="search-button">
+          <input
+            className="search-bar"
+            type="text"
+            placeholder="Search"
+            value={filter}
+            onChange={handleFilter}
+          />
+          <button className="search-button" onClick={filterClick}>
             <img className="search-icon" src="./youtube_icons/search.png" />
           </button>
           <button className="voice-search-button">

@@ -12,7 +12,8 @@ const Shorts = () => {
     const handleKeyDown = (event) => {
       switch (event.key) {
         case "ArrowUp":
-          moveDown();
+          moveUp();
+
           break;
         case "ArrowDown":
           moveUp();
@@ -30,14 +31,14 @@ const Shorts = () => {
   const [search] = useSearchParams();
   const side = search.get("side") || "max";
   const [position, setPosition] = useState(0); // Starting position
-  const divRef = useRef(null);
+  const divRef = useRef(0);
 
   // Define moveUp and moveDown functions within the component scope
-  const moveUp = () => {
+  const moveUp = (id) => {
     setPosition((prev) => prev - (divRef.current?.offsetHeight || 0)); // Move up by the div's height
   };
 
-  const moveDown = () => {
+  const moveDown = (id) => {
     setPosition((prev) => prev + (divRef.current?.offsetHeight || 0)); // Move down by the div's height
   };
 
@@ -47,6 +48,7 @@ const Shorts = () => {
       <div className="shorts">
         {ShortsData.map((val) => (
           <div
+            id={val.id}
             className="actual-shorts"
             ref={divRef}
             style={{
@@ -105,7 +107,7 @@ const Shorts = () => {
           </div>
         ))}
         <div className="up-down">
-          <div className="up">
+          <div className={position === 0 ? "dis" : "down"}>
             <button onClick={moveDown}>
               <img src="./youtube_icons/top.png"></img>
             </button>

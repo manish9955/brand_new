@@ -6,7 +6,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import Bsidebar from "./Bsidebar";
 import Asidebar from "./Asidebar";
 
-const Header = ({ handleFilter, filter, filterClick }) => {
+const Header = ({ handleFilter, filter, filterClick, handleKeyDown }) => {
   const navigate = useNavigate();
   const [search, setSearch] = useSearchParams();
 
@@ -52,6 +52,7 @@ const Header = ({ handleFilter, filter, filterClick }) => {
             placeholder="Search"
             value={filter}
             onChange={handleFilter}
+            onKeyDown={handleKeyDown}
           />
           <button className="search-button" onClick={filterClick}>
             <img className="search-icon" src="./youtube_icons/search.png" />

@@ -20,6 +20,13 @@ function App() {
     setFilter(e.target.value);
     //console.log(filter);
   };
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      console.log("enter key pressed");
+      filterClick(); // Trigger button click
+    }
+  };
+
   const filterClick = (e) => {
     setFilter_name(filter);
     setTimeout(() => {
@@ -35,6 +42,7 @@ function App() {
         filter={filter}
         filterClick={filterClick}
         handleFilter={handleFilter}
+        handleKeyDown={handleKeyDown}
       />
 
       <Routes>
